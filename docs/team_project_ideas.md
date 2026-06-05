@@ -12,7 +12,7 @@ you like the best.
 
 | Project Idea | Description | teammate name | teammate name | teammate name | teammate name | teammate name | teammate name |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| First idea | Description | | | | | | |
-| Second idea | Description | | | | | | |
+| First Idea | Description | | | | | | |
+| Second Idea | Description | | | | | | |
 | ... | Description | | | | | | |
-| Last idea | Description | | | | | | |
+| Last Idea | Description | | | | | | |
