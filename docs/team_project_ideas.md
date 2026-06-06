@@ -10,9 +10,9 @@ sentences.
 Each team member should Place an 'X' under their name to vote for the ideas 
 you like the best.
 
-| Project Idea | Description | teammate name | teammate name | teammate name | teammate name | teammate name | teammate name |
+| Project Idea | Description | Bread | teammate name | teammate name | teammate name | teammate name | teammate name |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| First idea | Description | | | | | | |
-| Second idea | Description | | | | | | |
+| Disaster Transparency Dashboard | A web app that aggregates disaster-related updates. Shows active disasters and organizations responding. |X | | | | | |
+| Local Community Alert System | Users post local issues. Road block,power outages, etc. | | | | | | |
 | ... | Description | | | | | | |
 | Last idea | Description | | | | | | |
