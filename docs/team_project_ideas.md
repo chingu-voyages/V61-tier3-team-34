@@ -13,6 +13,6 @@ you like the best.
 | Project Idea | Description | teammate name | teammate name | teammate name | teammate name | teammate name | teammate name |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | First idea | Description | | | | | | |
-| Second idea | Description | | | | | | |
+| Second idea: Cybersecurity Quiz Platform | Description: Interactive quiz app covering topics like social engineering, encryption basics, and safe browsing. Tracks scores, shows explanations, and has a leaderboard. |Thanasis_Codes | | | | | |
 | ... | Description | | | | | | |
 | Last idea | Description | | | | | | |
