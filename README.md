@@ -23,15 +23,15 @@ This tool empowers job seekers to prepare with confidence, focus on what matters
 
 ## Key Features
 
-- **Ability to upload a Job Description as a simple text file or paste the Job Description directly into a text box.
+- Ability to upload a Job Description as a simple text file or paste the Job Description directly into a text box.
 
-- **Generate a list of Interview Questions based on three categories: Technical Questions, Behavioral Questions, and Experience-based Questions.
+- Generate a list of Interview Questions based on three categories: Technical Questions, Behavioral Questions, and Experience-based Questions.
 
-- **Provide a simple, clean UI to display the generated questions.
+- Provide a simple, clean UI to display the generated questions.
 
-- **Have a 'Mock Interview' mode where the questions are asked one at a time, and possible answers are provided.
+- Have a 'Mock Interview' mode where the questions are asked one at a time, and possible answers are provided.
 
-- **Provide the ability to download the questions
+- Provide the ability to download the questions
 
 ---
 
