@@ -4,6 +4,14 @@ import { getSupabaseClient } from "@/lib/supabase";
 
 export const runtime = "nodejs";
 
+// Allow up to 10MB uploads (Vercel default is 4.5MB for serverless functions)
+export const config = {
+  api: {
+    bodyParser: false,
+    responseLimit: "10mb",
+  },
+};
+
 /**
  * POST /api/ingest
  * Accepts either:
@@ -19,7 +27,17 @@ export async function POST(request) {
     let jdText = "";
 
     if (contentType.includes("multipart/form-data")) {
-      const formData = await request.formData();
+      let formData;
+      try {
+        formData = await request.formData();
+      } catch (err) {
+        console.error("formData parse error:", err);
+        return NextResponse.json(
+          { error: "Could not read the uploaded file. Please try again." },
+          { status: 400 }
+        );
+      }
+
       const file = formData.get("file");
 
       if (!file || typeof file === "string") {
@@ -29,8 +47,17 @@ export async function POST(request) {
         );
       }
 
-      const arrayBuffer = await file.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
+      let buffer;
+      try {
+        const arrayBuffer = await file.arrayBuffer();
+        buffer = Buffer.from(arrayBuffer);
+      } catch (err) {
+        console.error("Buffer read error:", err);
+        return NextResponse.json(
+          { error: "Could not read the file contents. Please try again." },
+          { status: 400 }
+        );
+      }
 
       try {
         jdText = await extractTextFromFile(buffer, file.name);
@@ -38,7 +65,11 @@ export async function POST(request) {
         if (err instanceof UnsupportedFileError) {
           return NextResponse.json({ error: err.message }, { status: 400 });
         }
-        throw err;
+        console.error("Text extraction error:", err);
+        return NextResponse.json(
+          { error: "Could not extract text from the file. Please try pasting the text directly instead." },
+          { status: 422 }
+        );
       }
     } else {
       const body = await request.json();

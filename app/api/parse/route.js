@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getGroqClient, GROQ_MODEL } from "@/lib/groq";
+import { getGroqClient, GROQ_MODEL, truncateJDText } from "@/lib/groq";
 import {
   buildExtractionPrompt,
   normalizeExtractedJob,
@@ -39,7 +39,7 @@ export async function POST(request) {
     const groq = getGroqClient();
     const completion = await groq.chat.completions.create({
       model: GROQ_MODEL,
-      messages: [{ role: "user", content: buildExtractionPrompt(jdText) }],
+      messages: [{ role: "user", content: buildExtractionPrompt(truncateJDText(jdText)) }],
       temperature: 0.2,
       response_format: { type: "json_object" },
     });
