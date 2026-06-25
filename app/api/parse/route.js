@@ -52,7 +52,7 @@ export async function POST(request) {
     return NextResponse.json(
       {
         error:
-          "You have to upload another file, with real .txt, .docx and .pdf format. Not only file extension.",
+          "We couldn't analyze that job description right now. Please try again in a moment.",
       },
       { status: 502 }
     );
