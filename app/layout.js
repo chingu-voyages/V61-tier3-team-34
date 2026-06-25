@@ -1,29 +1,28 @@
-import { Fraunces, Inter } from "next/font/google";
+import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const plusJakarta = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["500", "600", "700", "800"],
 });
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata = {
-  title: "DashFetch — Interview prep from any job description",
+  title: "DashFetch — Turn any Job Description into Interview Questions",
   description:
-    "Upload or paste a job description and get the questions a recruiter is likely to ask, organized by category, plus a mock interview mode.",
+    "Upload or paste a job description and get AI-generated interview questions tailored to the role.",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-paper text-ink antialiased">
+    <html lang="en" className={`${plusJakarta.variable} ${inter.variable}`}>
+      <body className="min-h-screen flex flex-col bg-white text-gray-800 antialiased">
         {children}
       </body>
     </html>
