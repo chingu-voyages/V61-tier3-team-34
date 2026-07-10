@@ -307,6 +307,7 @@ export default function HomePage() {
                       onClick={() => document.getElementById("file-input").click()}
                       role="button"
                       tabIndex={0}
+                      aria-label="Upload job description file"
                       onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") document.getElementById("file-input").click(); }}
                       className={`flex-1 flex flex-col items-center justify-center gap-3 rounded-xl border-2 border-dashed p-6 text-center cursor-pointer transition-colors focus-ring ${
                         isDragging ? "border-blue bg-blue-pale" : "border-gray-200 bg-gray-50 hover:border-blue hover:bg-blue-pale"
@@ -316,7 +317,7 @@ export default function HomePage() {
                       <div className="w-14 h-14 relative flex items-center justify-center mb-1">
                     <Image 
                       src="/upload-cloud.png" 
-                      alt="Upload Icon"
+                      alt=""
                       width={56}              
                       height={56}
                       className="object-contain"
@@ -363,7 +364,7 @@ export default function HomePage() {
                       max={20}
                       value={quantity}
                       onChange={(e) => setQuantity(Number(e.target.value))}
-                      className="flex-1 accent-blue"
+                      className="flex-1 accent-blue focus-ring rounded-lg"
                       aria-label="Number of questions"
                     />
                     <span className="text-sm text-gray-400 font-medium">20</span>
